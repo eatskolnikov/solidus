@@ -4,7 +4,7 @@ module Spree
   class RoleUser < Spree::Base
     self.table_name = "spree_roles_users"
     belongs_to :role, class_name: "Spree::Role", optional: true
-    belongs_to :user, class_name: Spree.user_class, optional: true
+    belongs_to :user, class_name: "User", optional: true
 
     after_create :auto_generate_spree_api_key
 

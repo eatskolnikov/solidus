@@ -8,7 +8,7 @@ module Spree
   class LegacyUser < Spree::Base
     include UserMethods
 
-    self.table_name = 'spree_users'
+    self.table_name = 'users'
 
     def self.model_name
       ActiveModel::Name.new Spree::LegacyUser, Spree, 'user'
